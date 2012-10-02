@@ -1,4 +1,12 @@
 ExampleStart::Application.routes.draw do
+  get "images/index"
+
+  # get "images/index" # Generated with ImagesController, we'll use the routes below instead.
+
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,4 +63,9 @@ ExampleStart::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
+  # CHANGES
+  resources :images 
+  root :to => 'images#index'
+
 end
