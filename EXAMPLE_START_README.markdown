@@ -169,6 +169,16 @@ https://github.com/justinfrench/formtastic
 13. Update the ImagesController so that the index action queries the database for images. Functional test should now pass.
 14. Update the view in ap/views/images/index.html.erb so that the image titles are displayed on the page. All tests should now pass.
 
+## Adding an admin interface to images
+
+Doing integration testing on an admin interface takes some extra scaffolding which I won't cover here.
+
+1. In a browser you can get to the admin interface by visiting http://localhost:3000/admin with username/password admin@example.com/password. There is currently no admin interface for images. 
+2. `bundle exec rails g active_admin:resource Image` to create an admin interface for images.
+3. Load fixtures into the development database with `bundle exec rake db:fixtures:load`. (You may need to log back in).
+4. You ought now be able to CRUD images within this interface.
+
+
 
 
 
