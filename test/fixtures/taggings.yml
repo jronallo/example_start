@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tag: outside
+  image: one
+
+two:
+  tag: inside
+  image: two
+
+three:
+  tag: outside
+  image: three

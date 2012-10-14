@@ -12,3 +12,9 @@ two:
   description: Image description two.
   selected: false
 
+three:
+  title: Third Image
+  filename: filename_three
+  description: Image description three.
+  selected: false
+
