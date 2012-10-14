@@ -3,6 +3,8 @@ class Image < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
+  default_scope order("filename DESC")
+
   scope :selected, where(:selected => true)
   scope :not_selected, where(:selected => false)
 
