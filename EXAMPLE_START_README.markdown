@@ -179,6 +179,21 @@ Doing integration testing on an admin interface takes some extra scaffolding whi
 4. You ought now be able to CRUD images within this interface.
 
 
+## 2nd session: adding some associations
+
+Add some new fields to Image.
+
+```
+rails g migration add_new_fields_to_images filename:string description:text selected:boolean
+```
+
+Update the fixtures to include these fields.
+```
+rake db:fixtures:load
+```
+
+
+
 
 
 

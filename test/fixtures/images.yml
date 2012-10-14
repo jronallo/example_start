@@ -2,6 +2,13 @@
 
 one:
   title: An Image Title
+  filename: filename_one
+  description: Image description one.
+  selected: true
 
 two:
   title: MyString
+  filename: filename_two
+  description: Image description two.
+  selected: false
+
