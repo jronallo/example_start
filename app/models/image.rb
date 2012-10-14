@@ -3,6 +3,9 @@ class Image < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
+  scope :selected, where(:selected => true)
+  scope :not_selected, where(:selected => false)
+
   def self.with_tag_outside
     joins(:tags).where("tags.name" => "outside")
   end
